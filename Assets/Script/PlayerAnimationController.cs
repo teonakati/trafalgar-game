@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerAnimationController : MonoBehaviour
 {
     private Animator _animator;
+    [SerializeField]
+    private AudioManager _audioManager;
     private int _hashVelocityZ;
     private float _maxWalkSpeed = 0.5f;
     private float _maxRunningSpeed = 2f;
@@ -53,5 +55,15 @@ public class PlayerAnimationController : MonoBehaviour
         }
 
         _animator.SetFloat(_hashVelocityZ, _animationSpeed);
+    }
+
+    void StepSound()
+    {
+        _audioManager.PlayStepSound();
+    }
+
+    void RunSound()
+    {
+        _audioManager.PlayRunSound();
     }
 }
