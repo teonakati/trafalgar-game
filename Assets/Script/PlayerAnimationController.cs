@@ -66,4 +66,8 @@ public class PlayerAnimationController : MonoBehaviour
     {
         _audioManager.PlayRunSound();
     }
+    void RoomSound()
+    {
+        _audioManager.PlayRoomSound();
+    }
 }

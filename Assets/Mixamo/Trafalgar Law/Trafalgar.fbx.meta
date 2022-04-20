@@ -608,13 +608,13 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Copia(Clone)
+    - name: Trafalgar(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Armature
-      parentName: Copia(Clone)
+      parentName: Trafalgar(Clone)
       position: {x: 0.19654062, y: -0.21019378, z: -0.35672277}
       rotation: {x: 0.06919031, y: 0.049389493, z: 0.040272105, w: 0.99556595}
       scale: {x: 2.54, y: 2.54, z: 2.54}
@@ -735,8 +735,8 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: F_FORE3_L
       parentName: F_FORE2_L
-      position: {x: -0.029883938, y: 0.000000002618343, z: -0.00000003910351}
-      rotation: {x: -0.018437965, y: -0.01843803, z: 0.7080679, w: 0.7056628}
+      position: {x: -0.029872136, y: 0.00008383995, z: 0.000049270737}
+      rotation: {x: -0.034318045, y: -0.18704154, z: 0.038194112, w: 0.9810092}
       scale: {x: 1, y: 1, z: 1}
     - name: F_FORE3_L_end
       parentName: F_FORE3_L
@@ -755,8 +755,8 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: F_LITTLE3_L
       parentName: F_LITTLE2_L
-      position: {x: -0.019587172, y: 0.0000000021026323, z: 0.00030540628}
-      rotation: {x: -0.016876208, y: -0.027907671, z: 0.70866835, w: 0.70478755}
+      position: {x: -0.019565197, y: 0.000025826399, z: 0.00032737112}
+      rotation: {x: 0.008695217, y: -0.031433087, z: -0.02559764, w: 0.99914026}
       scale: {x: 1, y: 1, z: 1}
     - name: F_LITTLE3_L_end
       parentName: F_LITTLE3_L
@@ -775,8 +775,8 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: F_MEDICINAL3_L
       parentName: F_MEDICINAL2_L
-      position: {x: -0.030590763, y: 0.000000005024957, z: 0.0007978066}
-      rotation: {x: -0.00943041, y: -0.0279125, z: 0.7088588, w: 0.70473486}
+      position: {x: -0.0305676, y: 0.00003871583, z: 0.0008239893}
+      rotation: {x: 0.012049497, y: -0.026886104, z: 0.041139536, w: 0.998719}
       scale: {x: 1, y: 1, z: 1}
     - name: F_MEDICINAL3_L_end
       parentName: F_MEDICINAL3_L
@@ -795,8 +795,8 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: F_MIDDLE3_L
       parentName: F_MIDDLE2_L
-      position: {x: -0.030769996, y: 8.974318e-11, z: 0.00000019064704}
-      rotation: {x: -0.018438004, y: -0.01843793, z: 0.70806783, w: 0.70566285}
+      position: {x: -0.030741513, y: 0.00017332812, z: 0.00008314429}
+      rotation: {x: -0.008171623, y: 0.05895134, z: 0.08028283, w: 0.9949938}
       scale: {x: 1, y: 0.99999994, z: 1}
     - name: F_MIDDLE3_L_end
       parentName: F_MIDDLE3_L
@@ -811,12 +811,12 @@ ModelImporter:
     - name: F_THUMB2_L
       parentName: F_THUMB1_L
       position: {x: -0.054512784, y: -0.021885667, z: -0.017419739}
-      rotation: {x: 0.012293708, y: -0.11311104, z: 0.085870974, w: 0.9897883}
+      rotation: {x: 0.012293709, y: -0.11311104, z: 0.08587099, w: 0.9897883}
       scale: {x: 1, y: 1, z: 1}
     - name: F_THUMB3_L
       parentName: F_THUMB2_L
-      position: {x: -0.03389908, y: -0.0041660387, z: -0.00253502}
-      rotation: {x: -0.04081384, y: 0.016248986, z: 0.7373358, w: 0.6740965}
+      position: {x: -0.033904422, y: -0.0041031893, z: -0.0024887072}
+      rotation: {x: -0.057929803, y: -0.14818197, z: -0.17781232, w: 0.9711174}
       scale: {x: 1, y: 1, z: 1}
     - name: F_THUMB3_L_end
       parentName: F_THUMB3_L
@@ -965,8 +965,8 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: F_FORE3_R
       parentName: F_FORE2_R
-      position: {x: 0.029884033, y: -0.0000000021500783, z: 0.00000015163134}
-      rotation: {x: -0.009858829, y: 0.009858996, z: -0.70766985, w: 0.70640576}
+      position: {x: 0.029891392, y: -0.0000047619496, z: 0.000056664485}
+      rotation: {x: -0.00013474064, y: 0.013942339, z: -0.010535249, w: 0.99984735}
       scale: {x: 1, y: 1, z: 1}
     - name: F_FORE3_R_end
       parentName: F_FORE3_R
@@ -985,8 +985,8 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: F_LITTLE3_R
       parentName: F_LITTLE2_R
-      position: {x: 0.019587057, y: 0.0000000021025506, z: 0.0003098695}
-      rotation: {x: 0.0013396409, y: 0.009860139, z: -0.7077189, w: 0.70642406}
+      position: {x: 0.019589098, y: -0.00000043671466, z: 0.00034283838}
+      rotation: {x: 0.00816744, y: 0.005683853, z: 0.041508403, w: 0.99908864}
       scale: {x: 1, y: 1, z: 1}
     - name: F_LITTLE3_R_end
       parentName: F_LITTLE3_R
@@ -1005,8 +1005,8 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: F_MEDICINAL3_R
       parentName: F_MEDICINAL2_R
-      position: {x: 0.030591048, y: 0.000000005024798, z: 0.0007998665}
-      rotation: {x: 0.008644725, y: 0.009858984, z: -0.70768565, w: 0.70640576}
+      position: {x: 0.030591566, y: -0.000002726622, z: 0.0008233542}
+      rotation: {x: 0.0130956685, y: 0.0006499289, z: 0.015058754, w: 0.9998007}
       scale: {x: 1, y: 1, z: 1}
     - name: F_MEDICINAL3_R_end
       parentName: F_MEDICINAL3_R
@@ -1025,8 +1025,8 @@ ModelImporter:
       scale: {x: 1, y: 0.99999994, z: 1}
     - name: F_MIDDLE3_R
       parentName: F_MIDDLE2_R
-      position: {x: 0.030770054, y: 8.966587e-11, z: 0.00000007620613}
-      rotation: {x: -0.009858829, y: 0.009858996, z: -0.70766985, w: 0.70640576}
+      position: {x: 0.030775577, y: -0.000002660838, z: 0.000047015736}
+      rotation: {x: -0.00037843612, y: 0.013938002, z: -0.02800512, w: 0.9995106}
       scale: {x: 1, y: 1, z: 1}
     - name: F_MIDDLE3_R_end
       parentName: F_MIDDLE3_R
@@ -1045,8 +1045,8 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: F_THUMB3_R
       parentName: F_THUMB2_R
-      position: {x: 0.03389889, y: -0.004166096, z: -0.0025301373}
-      rotation: {x: -0.024035446, y: -0.026949925, z: -0.74839807, w: 0.6622661}
+      position: {x: 0.033922087, y: -0.004155858, z: -0.002450735}
+      rotation: {x: -0.03611098, y: -0.00020653746, z: -0.009595114, w: 0.99930173}
       scale: {x: 1, y: 1, z: 1}
     - name: F_THUMB3_R_end
       parentName: F_THUMB3_R
@@ -1176,7 +1176,7 @@ ModelImporter:
     - name: HAIR_08
       parentName: HAIR_07
       position: {x: -0.05224163, y: -0.0000000500679, z: -0.00000017881393}
-      rotation: {x: -0.008986431, y: 0.00038562564, z: -0.007382331, w: 0.9999323}
+      rotation: {x: -0.008986433, y: 0.00038562564, z: -0.007382332, w: 0.9999323}
       scale: {x: 1.0000001, y: 1, z: 0.99999994}
     - name: HAIR_08_end
       parentName: HAIR_08
@@ -1416,7 +1416,7 @@ ModelImporter:
     - name: THIGH_R
       parentName: WAIST
       position: {x: 0.09999999, y: -0.0028766536, z: -0.029759979}
-      rotation: {x: -0.05342314, y: 0.06828592, z: 0.05075917, w: 0.99494046}
+      rotation: {x: -0.053423148, y: 0.06828592, z: 0.050759178, w: 0.99494046}
       scale: {x: 0.99999994, y: 1, z: 0.99999994}
     - name: CLANK_R
       parentName: THIGH_R
@@ -1559,42 +1559,42 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Camera
-      parentName: Copia(Clone)
+      parentName: Trafalgar(Clone)
       position: {x: -7.4811316, y: 5.343665, z: 6.5076394}
       rotation: {x: -0.21205643, y: -0.3869099, z: -0.08579305, w: 0.89329296}
       scale: {x: 100, y: 100, z: 100}
     - name: chr1070_damage_A
-      parentName: Copia(Clone)
+      parentName: Trafalgar(Clone)
       position: {x: -0.00000009689331, y: 3.12413e-23, z: -1.9175772e-16}
       rotation: {x: -0.7071067, y: -1.1698099e-24, z: 5.8490476e-25, w: 0.7071068}
       scale: {x: 2.54, y: 2.54, z: 2.54}
     - name: chr1070_damage_AB
-      parentName: Copia(Clone)
+      parentName: Trafalgar(Clone)
       position: {x: -0.00000009689331, y: 3.12413e-23, z: -1.9175772e-16}
       rotation: {x: -0.7071067, y: -1.1698099e-24, z: 5.8490476e-25, w: 0.7071068}
       scale: {x: 2.54, y: 2.54, z: 2.54}
     - name: chr1070_equipment1
-      parentName: Copia(Clone)
+      parentName: Trafalgar(Clone)
       position: {x: -0.000000048446655, y: 0.000000048446655, z: 7.712484e-15}
       rotation: {x: -0.7071067, y: -1.1698099e-24, z: 5.8490476e-25, w: 0.7071068}
       scale: {x: 2.54, y: 2.54, z: 2.54}
     - name: chr1070_equipment2
-      parentName: Copia(Clone)
+      parentName: Trafalgar(Clone)
       position: {x: -0, y: -0.00000009689331, z: -1.5943842e-14}
       rotation: {x: -0.7071067, y: -1.1698099e-24, z: 5.8490476e-25, w: 0.7071068}
       scale: {x: 2.54, y: 2.54, z: 2.54}
     - name: chr1070_facial1
-      parentName: Copia(Clone)
+      parentName: Trafalgar(Clone)
       position: {x: -0, y: 4.31865e-23, z: -2.6507684e-16}
       rotation: {x: -0.7071067, y: 0, z: -0, w: 0.7071068}
       scale: {x: 2.54, y: 2.54, z: 2.54}
     - name: chr1070_form0
-      parentName: Copia(Clone)
+      parentName: Trafalgar(Clone)
       position: {x: -0, y: 4.31865e-23, z: -2.6507684e-16}
       rotation: {x: -0.7071067, y: 0, z: -0, w: 0.7071068}
       scale: {x: 2.54, y: 2.54, z: 2.54}
     - name: Lamp
-      parentName: Copia(Clone)
+      parentName: Trafalgar(Clone)
       position: {x: -4.0762453, y: 5.903862, z: -1.005454}
       rotation: {x: 0.28416622, y: 0.7269424, z: 0.3420339, w: -0.52327543}
       scale: {x: 100.00001, y: 99.99999, z: 100}

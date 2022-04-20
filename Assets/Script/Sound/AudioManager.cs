@@ -8,6 +8,11 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
     public Sound[] walkingSounds;
     public Sound[] runningSounds;
+    public Sound room;
+    public Sound roomStart;
+
+    [SerializeField]
+    private RoomSpell roomSpell;
 
     void Awake()
     {
@@ -16,7 +21,7 @@ public class AudioManager : MonoBehaviour
         SetupAudioSource(runningSounds);
     }
 
-    public void Play (string name)
+    public void Play(string name)
     {
         var sound = Array.Find(sounds, sound => sound.soundName == name);
         sound.source.Play();
@@ -32,6 +37,15 @@ public class AudioManager : MonoBehaviour
     {
         var source = RandomAudio(runningSounds);
         source.Play();
+    }
+
+    public void PlayRoomSound()
+    {
+        SetupAudioSource(room);
+        SetupAudioSource(roomStart);
+        room.source.Play();
+        roomSpell.SpawnRoom();
+        roomStart.source.PlayDelayed(room.source.clip.length);
     }
 
     private AudioSource RandomAudio(Sound[] sounds)
@@ -51,5 +65,13 @@ public class AudioManager : MonoBehaviour
             sound.source.volume = sound.volume;
             sound.source.pitch = sound.pitch;
         }
+    }
+
+    private void SetupAudioSource(Sound sound)
+    {
+        sound.source = gameObject.AddComponent<AudioSource>();
+        sound.source.clip = sound.clip;
+        sound.source.volume = sound.volume;
+        sound.source.pitch = sound.pitch;
     }
 }
