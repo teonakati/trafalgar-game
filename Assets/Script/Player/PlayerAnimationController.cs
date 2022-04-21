@@ -62,14 +62,20 @@ public class PlayerAnimationController : MonoBehaviour
 
     void StartRoom()
     {
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             _animator.SetLayerWeight(_spellLayerIndex, 1f);
             _animator.Play("Humanoid Spell", _spellLayerIndex, 0f);
         }
     }
 
-    void EndAnimation(string layerName)
+    public void Shambles()
+    {
+        _animator.SetLayerWeight(_spellLayerIndex, 1f);
+        _animator.PlayInFixedTime("Shambles", _spellLayerIndex, 0.27f);
+    }
+
+    public void EndAnimation(string layerName)
     {
         _animator.SetLayerWeight(_spellLayerIndex, 0f);
     }

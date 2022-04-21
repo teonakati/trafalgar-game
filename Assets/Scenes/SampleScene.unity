@@ -471,9 +471,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c019fdb7d62bb824e99d064ac29590a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ballPrefab: {fileID: 4032013475165289147, guid: 71537b0d05082df40a452c42eacd267e, type: 3}
-  _ballPrefabInternal: {fileID: 9137018555153948462, guid: 84050f5519ce2764ca90623453b6f450, type: 3}
-  _scaleSpeed: 0
+  ballPrefab: {fileID: 4032013475165289147, guid: 71537b0d05082df40a452c42eacd267e, type: 3}
+  ballPrefabInternal: {fileID: 9137018555153948462, guid: 84050f5519ce2764ca90623453b6f450, type: 3}
+  scaleSpeed: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,7 +602,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -615,7 +615,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904487565}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1.69, z: 1}
@@ -1088,6 +1088,18 @@ MonoBehaviour:
   roomStart:
     soundName: 
     clip: {fileID: 8300000, guid: b27e65600307046489cdb872809d8150, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  shambles:
+    soundName: 
+    clip: {fileID: 8300000, guid: 3d40e59f937370648be2a656269233b7, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  teleport:
+    soundName: 
+    clip: {fileID: 8300000, guid: 66dd73c3621f6144ca64e62014e9d7f5, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}

@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     public Sound[] runningSounds;
     public Sound room;
     public Sound roomStart;
+    public Sound shambles;
+    public Sound teleport;
 
     [SerializeField]
     private RoomSpell roomSpell;
@@ -49,6 +51,20 @@ public class AudioManager : MonoBehaviour
         roomSpell.IncreaseScaleSpeed(0.01f, room.source.clip.length);
     }
 
+    public void PlayShamblesSound()
+    {
+        SetupAudioSource(shambles);
+        shambles.source.Play();
+    }
+
+
+    public void PlayTeleportSound()
+    {
+        SetupAudioSource(teleport);
+        teleport.source.Play();
+    }
+
+
     private AudioSource RandomAudio(Sound[] sounds)
     {
         var random = UnityEngine.Random.Range(0, sounds.Length);
@@ -68,7 +84,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void SetupAudioSource(Sound sound)
+    public void SetupAudioSource(Sound sound)
     {
         sound.source = gameObject.AddComponent<AudioSource>();
         sound.source.clip = sound.clip;
