@@ -46,6 +46,7 @@ public class AudioManager : MonoBehaviour
         room.source.Play();
         roomSpell.SpawnRoom();
         roomStart.source.PlayDelayed(room.source.clip.length);
+        roomSpell.IncreaseScaleSpeed(0.01f, room.source.clip.length);
     }
 
     private AudioSource RandomAudio(Sound[] sounds)

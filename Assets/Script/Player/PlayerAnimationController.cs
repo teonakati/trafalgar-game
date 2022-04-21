@@ -14,6 +14,7 @@ public class PlayerAnimationController : MonoBehaviour
     private float _deceleration = 2f;
     [SerializeField]
     private float _animationSpeed = 0f;
+    private int _spellLayerIndex;
 
     public bool IsWalking { get; private set; }
     public bool IsRunning { get; private set; }
@@ -22,14 +23,16 @@ public class PlayerAnimationController : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _hashVelocityZ = Animator.StringToHash("Velocity Z");
+        _spellLayerIndex = _animator.GetLayerIndex("Spell Layer");
     }
 
     void Update()
     {
-        IsWalking = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D);
+        IsWalking = Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0;
         IsRunning = Input.GetKey(KeyCode.LeftShift);
 
         HandleMovement(IsWalking, IsRunning);
+        StartRoom();
     }
 
     void HandleMovement(bool isWalking, bool isRunning)
@@ -57,17 +60,17 @@ public class PlayerAnimationController : MonoBehaviour
         _animator.SetFloat(_hashVelocityZ, _animationSpeed);
     }
 
-    void StepSound()
+    void StartRoom()
     {
-        _audioManager.PlayStepSound();
+        if (Input.GetKey(KeyCode.R))
+        {
+            _animator.SetLayerWeight(_spellLayerIndex, 1f);
+            _animator.Play("Humanoid Spell", _spellLayerIndex, 0f);
+        }
     }
 
-    void RunSound()
+    void EndAnimation(string layerName)
     {
-        _audioManager.PlayRunSound();
-    }
-    void RoomSound()
-    {
-        _audioManager.PlayRoomSound();
+        _animator.SetLayerWeight(_spellLayerIndex, 0f);
     }
 }
