@@ -14,6 +14,7 @@ public class RoomSpell : MonoBehaviour
     private float maxScale = 20f;
 
     public float scaleSpeed = 0f;
+    public bool isActive = false;
 
     void Start()
     {
@@ -33,9 +34,17 @@ public class RoomSpell : MonoBehaviour
 
     void Update()
     {
-        DisableRoomIfActive();
-        FollowMovement();
-        ScaleRoom();
+        if (!isActive && roomExternal != null)
+        {
+            DisableRoomIfActive();
+        }
+
+        if (isActive)
+        {
+            FollowMovement();
+            ScaleRoom();
+        }
+
     }
 
     void FollowMovement()
@@ -47,10 +56,16 @@ public class RoomSpell : MonoBehaviour
             roomExternal.transform.position = position;
         }
     }
-    
+
     void DisableRoomIfActive()
     {
-        if (Input.GetKey(KeyCode.R) && roomExternal != null)
+        var currentScale = roomExternal.transform.localScale;
+        var scale = new Vector3(currentScale.x - scaleSpeed * Time.deltaTime, currentScale.y - scaleSpeed * Time.deltaTime, currentScale.z - scaleSpeed * Time.deltaTime).normalized;
+        roomExternal.transform.localScale -= scale;
+        roomInternal.transform.localScale -= scale;
+        currentScale.x = scale.x;
+
+        if (scale.x < 0.1f)
         {
             Destroy(roomExternal);
             Destroy(roomInternal);
@@ -62,12 +77,14 @@ public class RoomSpell : MonoBehaviour
     {
         if (roomExternal != null && roomExternal.scene.IsValid() && scaleSpeed > 0f)
         {
+            isActive = true;
             var currentScale = roomExternal.transform.localScale;
 
             if (currentScale.x < maxScale)
             {
-                roomExternal.transform.localScale += new Vector3(currentScale.x + scaleSpeed * Time.deltaTime, currentScale.y + scaleSpeed * Time.deltaTime, currentScale.z + scaleSpeed * Time.deltaTime).normalized;
-                roomInternal.transform.localScale += new Vector3(currentScale.x + scaleSpeed * Time.deltaTime, currentScale.y + scaleSpeed * Time.deltaTime, currentScale.z + scaleSpeed * Time.deltaTime).normalized;
+                var scale = new Vector3(currentScale.x + scaleSpeed * Time.deltaTime, currentScale.y + scaleSpeed * Time.deltaTime, currentScale.z + scaleSpeed * Time.deltaTime).normalized;
+                roomExternal.transform.localScale += scale;
+                roomInternal.transform.localScale += scale;
             }
         }
     }

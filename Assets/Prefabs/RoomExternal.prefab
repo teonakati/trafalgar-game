@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6748618649513431919}
   - component: {fileID: 4681048918944977211}
   - component: {fileID: -2239850154575692058}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RoomExternal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,8 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4032013475165289147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.593386, y: 1.2649381, z: -23.652851}
+  m_LocalPosition: {x: -26.844213, y: 1.2649381, z: -20.22215}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53,6 +54,7 @@ MeshRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -61,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b041e5e199180d440b2e720682051de1, type: 2}
+  - {fileID: 2100000, guid: 32a76832b79e84347ad9df08b12709c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,3 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434ddbd85dcbed3429c1ed17e097ec72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layer:
+    serializedVersion: 2
+    m_Bits: 1

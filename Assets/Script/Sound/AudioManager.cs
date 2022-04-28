@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] runningSounds;
     public Sound room;
     public Sound roomStart;
+    public Sound roomEnd;
     public Sound shambles;
     public Sound teleport;
 
@@ -49,6 +50,13 @@ public class AudioManager : MonoBehaviour
         roomSpell.SpawnRoom();
         roomStart.source.PlayDelayed(room.source.clip.length);
         roomSpell.IncreaseScaleSpeed(0.01f, room.source.clip.length);
+    }
+
+    public void PlayRoomEndSound()
+    {
+        SetupAudioSource(roomEnd);
+        roomEnd.source.Play();
+
     }
 
     public void PlayShamblesSound()

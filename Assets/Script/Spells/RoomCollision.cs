@@ -6,26 +6,41 @@ public class RoomCollision : MonoBehaviour
 {
 
     private GameObject player;
-    private bool playerInRoom = false;
+    public bool playerInRoom { get; private set; } = false;
     private CharacterController controller;
     private GameObject other;
     private AudioManager audioManager;
     private PlayerAnimationController playerAnimation;
+    private Camera cam;
+    private GameObject crosshair;
+
+    public LayerMask layer;
 
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        crosshair = GameObject.FindGameObjectWithTag("Crosshair");
         controller = player.GetComponent<CharacterController>();
         audioManager = FindObjectOfType<AudioManager>();
         playerAnimation = FindObjectOfType<PlayerAnimationController>();
+        cam = FindObjectOfType<Camera>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerInRoom)
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            StartCoroutine(Teleport());
+            var position = new Vector3(0.5f, 0.75f, 0f);
+            var ray = cam.ViewportPointToRay(position);
+
+            var maxDistance = 20f;
+            if (Physics.Raycast(ray, out var hit, maxDistance, layer))
+            {
+                crosshair.transform.position = cam.WorldToScreenPoint(hit.point); //remover dps
+                Debug.Log($"Hit something: {hit.transform.name}");
+
+            }
         }
     }
 
@@ -55,12 +70,8 @@ public class RoomCollision : MonoBehaviour
         }
     }
 
-    private IEnumerator Teleport()
+    public void Teleport()
     {
-        playerAnimation.Shambles();
-        audioManager.PlayShamblesSound();
-        yield return new WaitForSeconds(audioManager.shambles.clip.length + 0.3f);
-        playerAnimation.EndAnimation("Spell Layer");
         audioManager.PlayTeleportSound();
         var otherPosition = other.gameObject.transform.position;
         var newPlayerPosition = new Vector3(otherPosition.x, otherPosition.y, otherPosition.z);

@@ -15,6 +15,7 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField]
     private float _animationSpeed = 0f;
     private int _spellLayerIndex;
+    private RoomSpell room;
 
     public bool IsWalking { get; private set; }
     public bool IsRunning { get; private set; }
@@ -24,6 +25,7 @@ public class PlayerAnimationController : MonoBehaviour
         _animator = GetComponent<Animator>();
         _hashVelocityZ = Animator.StringToHash("Velocity Z");
         _spellLayerIndex = _animator.GetLayerIndex("Spell Layer");
+        room = FindObjectOfType<RoomSpell>();
     }
 
     void Update()
@@ -64,19 +66,29 @@ public class PlayerAnimationController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            _animator.SetLayerWeight(_spellLayerIndex, 1f);
-            _animator.Play("Humanoid Spell", _spellLayerIndex, 0f);
+            if (room.isActive)
+            {
+                room.isActive = false;
+                _audioManager.PlayRoomEndSound();
+            }
+            else
+            {
+                room.isActive = true;
+                _animator.SetLayerWeight(_spellLayerIndex, 1f);
+                _animator.Play("Humanoid Spell", _spellLayerIndex, 0f);
+            }
         }
     }
 
     public void Shambles()
     {
         _animator.SetLayerWeight(_spellLayerIndex, 1f);
-        _animator.PlayInFixedTime("Shambles", _spellLayerIndex, 0.27f);
+        _animator.PlayInFixedTime("Humanoid Shambles", _spellLayerIndex, 0.27f);
     }
 
     public void EndAnimation(string layerName)
     {
         _animator.SetLayerWeight(_spellLayerIndex, 0f);
     }
+
 }

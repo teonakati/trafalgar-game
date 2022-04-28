@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+  - Crosshair
+  - Ground
   layers:
   - Default
   - TransparentFX
